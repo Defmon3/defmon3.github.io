@@ -42,6 +42,12 @@ p { margin: 0; color: #d6d6d6; }
 .one-time input { width: 180px; height: 36px; background: #0f0f0f; border: 1px solid #2a2a2a; border-radius: 10px; padding: .5rem .75rem; color: #eee; outline: none; }
 .secondary-btn { height: 36px; padding: 0 .9rem; border-radius: 9999px; background: #2a2a2a; color: #eee; text-decoration: none; display: inline-flex; align-items: center; font-weight: 600; letter-spacing: .15px; transition: transform .15s ease, box-shadow .15s ease, filter .15s ease; }
 .secondary-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.18); filter: brightness(1.05); }
+.support-banner { width: 100%; max-width: 900px; background-color: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 16px; padding: 0.9rem; margin-top: 1rem; }
+.banner-title { color: #d6d6d6; font-weight: 500; margin: 0 0 1rem 0; font-size: 0.9rem; }
+.org-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem 1.5rem; }
+.org-links a { display: inline-block; text-decoration: none; transition: transform .15s ease, opacity .15s ease; }
+.org-links a:hover { transform: scale(1.05); opacity: 0.85; }
+.org-links img { display: block; height: 32px; max-width: 150px; object-fit: contain; }
 .site-footer { position: fixed; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; padding: .75rem 1rem; gap: .75rem; background: color-mix(in oklab, canvas 92%, transparent); backdrop-filter: blur(8px); border-top: 1px solid color-mix(in oklab, canvasText 12%, transparent); }
 .site-footer .icon-btn { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .8rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,.08); transform: translateY(0); transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease; opacity: .95; color: inherit; }
 .site-footer .icon-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.12); opacity: 1; }
@@ -94,7 +100,7 @@ p { margin: 0; color: #d6d6d6; }
 
   <div class="plan">
     <h2>$10 / month</h2>
-    <a class="pp-btn" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-4TR20429FR015990VNCQZDY" target="_blank" rel="noopener" aria-label="Subscribe $10 on PayPal">
+    <a class="pp-btn" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-4TR20429FR015990VNCQZ2DY" target="_blank" rel="noopener" aria-label="Subscribe $10 on PayPal">
       <svg class="pp-logo" viewBox="0 0 24 24" fill="none"><path fill="#003087" d="M14.7 4.1c-2.3 0-4 .9-4.8 3l-.1.4h3.8c.6 0 1.1.5 1 .9l-.5 3.2c-.1.5-.6.9-1.2.9H8.3L7.5 18c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c3 0 5.6-1.9 6.2-5 .7-3.7-1.9-5.7-6.1-5.7z"/><path fill="#0070ba" d="M10.1 7.5H6.3l-1.5 9.1c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c.6 0 1.1-.4 1.2-.9l.4-2.5c.1-.4-.3-.9-.9-.9z"/></svg>
       <span>PayPal Subscribe</span>
     </a>
@@ -106,6 +112,22 @@ p { margin: 0; color: #d6d6d6; }
   <input id="donate-amount" type="number" step="0.01" min="1" placeholder="Custom amount (USD)">
   <button class="secondary-btn" id="donate-custom">Donate</button>
 </div>
+
+<section class="support-banner">
+  <p class="banner-title">Also consider supporting these organizations:</p>
+  <div class="org-links">
+    <a href="https://www.libertyukraine.org/" target="_blank" rel="noopener" aria-label="Liberty Ukraine">
+      <img src="https://static.wixstatic.com/media/a1385e_0894e5ee42c44f81b76667a533791f04~mv2.png/v1/crop/x_0,y_7,w_2606,h_436/fill/w_331,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo-website.png" alt="Liberty Ukraine Logo">
+    </a>
+    <a href="https://www.blagulabilen.se/" target="_blank" rel="noopener" aria-label="Blågula Bilen">
+      <img src="https://usercontent.one/wp/www.blagulabilen.se/wp-content/uploads/2022/10/Logo_UA.png?media=1748880482" alt="Blågula Bilen Logo">
+    </a>
+    <a href="https://www.help99.co/" target="_blank" rel="noopener" aria-label="69th Sniffing Brigade">
+      <img src="https://cdn.prod.website-files.com/66688806c593d63c48e1f7b3/66689273084605724317a106_logo.svg" alt="69th Sniffing Brigade Logo">
+    </a>
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
