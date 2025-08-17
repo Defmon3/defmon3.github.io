@@ -2,100 +2,128 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support</title>
-<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale-1">
+<title>Support Defmon3</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; display: grid; place-items: center; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: #111; color: #eee; }
+main { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 1100px; width: 100%; gap: 2.5rem; padding: 3rem 1rem 5rem 1rem; }
+h1 { margin: 0; font-size: clamp(2.25rem, 5vw, 3.25rem); font-weight: 800; letter-spacing: -1px; background: linear-gradient(120deg, #fdfbfb 0%, #d8d8d8 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+h2 { margin: 0; font-size: 1.25rem; }
+p { margin: 0; color: #d6d6d6; }
+.subtitle { font-size: 1.1rem; color: #b0b0b0; max-width: 600px; }
+.card { width: 100%; background: #171717; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.about { display: grid; gap: 1.25rem; padding: 1.25rem; text-align: left; align-items: start; border: 1px solid #2a2a2a; background: #1a1a1a; }
+.about p { line-height: 1.7; max-width: 65ch; color: #c8c8c8; }
+.about p + p { margin-top: 1rem; }
+.about h3 { margin: 0; font-size: 1.35rem; }
+.about h4 { margin: 1.25rem 0 .75rem 0; font-size: 1.1rem; color: #f0f0f0; padding-bottom: .6rem; border-bottom: 1px solid #333; }
+.about .lead { font-size: 1.15rem; font-weight: 500; color: #f5f5f5; }
+.avatar { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 22px rgba(0,0,0,.4); border: 2px solid #2a2a2a; }
+.cols { display: grid; gap: 1rem; }
+.styled-list { margin: 1rem 0 0 0; padding-left: 0; color: #d6d6d6; list-style: none; }
+.styled-list li { position: relative; padding-left: 1.5rem; margin-bottom: .7rem; }
+.styled-list li::before { content: '›'; position: absolute; left: 0; top: 1px; font-weight: 700; font-size: 1.2em; color: #ffc439; }
+@media (min-width: 780px) {
+  .about { grid-template-columns: 160px 1fr; padding: 2rem; gap: 2rem; }
+  .cols { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .focus { border-left: 1px solid #333; padding-left: 2rem; }
+}
+.plans { display: grid; grid-template-columns: 1fr; gap: 1rem; width: 100%; max-width: 900px; }
+@media (min-width: 640px) { .plans { grid-template-columns: 1fr 1fr; } }
+.plan { display: flex; flex-direction: column; gap: 1rem; padding: 1.25rem; border-radius: 16px; background: #171717; box-shadow: 0 8px 28px rgba(0,0,0,.35); }
+.pp-btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; border-radius: 9999px; padding: .75rem 1rem; text-decoration: none; font-weight: 700; letter-spacing: .2px; background: #ffc439; color: #111; box-shadow: 0 6px 18px rgba(0,0,0,.25); transition: transform .15s ease, box-shadow .15s ease, filter .15s ease; }
+.pp-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 26px rgba(0,0,0,.35); filter: brightness(1.03); }
+.pp-logo { width: 22px; height: 22px; }
+.one-time { display: flex; align-items: center; justify-content: center; gap: .5rem; margin-top: .25rem; font-size: .9rem; opacity: .9; }
+.one-time label { color: #cfcfcf; }
+.one-time input { width: 180px; height: 36px; background: #0f0f0f; border: 1px solid #2a2a2a; border-radius: 10px; padding: .5rem .75rem; color: #eee; outline: none; }
+.secondary-btn { height: 36px; padding: 0 .9rem; border-radius: 9999px; background: #2a2a2a; color: #eee; text-decoration: none; display: inline-flex; align-items: center; font-weight: 600; letter-spacing: .15px; transition: transform .15s ease, box-shadow .15s ease, filter .15s ease; }
+.secondary-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.18); filter: brightness(1.05); }
+.site-footer { position: fixed; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; padding: .75rem 1rem; gap: .75rem; background: color-mix(in oklab, canvas 92%, transparent); backdrop-filter: blur(8px); border-top: 1px solid color-mix(in oklab, canvasText 12%, transparent); }
+.site-footer .icon-btn { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .8rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,.08); transform: translateY(0); transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease; opacity: .95; color: inherit; }
+.site-footer .icon-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.12); opacity: 1; }
+.site-footer .icon { width: 18px; height: 18px; display: inline-block; }
+.label { font-weight: 500; }
+</style>
 </head>
 <body>
 <main>
 <h1>Support Our Work</h1>
 
 <section class="card about">
-<img class="avatar" src="https://raw.githubusercontent.com/Defmon3/defmon3.github.io/refs/heads/main/profile.jpg" alt="Profile image of Defmon3">
-<div class="cols">
-<div>
-<h3>Hi, I am Defmon3.</h3>
-<p class="lead">I am an independent OSINT researcher. My mission is to document and counter the activities of the Russian Federation using open sources.</p>
-<p>I run this project in my spare time alongside a full-time job.</p>
-<p>I design and maintain investigative tools.</p>
-<p>I collect and verify data at scale.</p>
-<p>I publish results others can act on.</p>
-<p>I host a community Discord server for coordination and support and operate Aleph for searchable datasets and documents.</p>
-<p>The project relies on paid services including Google Cloud for hosting websites, databases, and tools; Scribble Maps for mapping and collaboration; and commercial satellite services for imagery analysis.</p>
-</div>
-<div class="focus">
-<h4>Current focus areas</h4>
-<ul>
-<li>Tracking Russian military units</li>
-<li>Monitoring Russian social media accounts</li>
-<li>Documenting Russian personnel losses</li>
-<li>Mapping infrastructure, industry, and personnel networks</li>
-</ul>
-<p class="outputs-note">Outputs include datasets, trackers, dashboards, concise reports, and APIs designed for clarity, reuse, and accountability.</p>
-</div>
-</div>
+  <img class="avatar" src="https://raw.githubusercontent.com/Defmon3/defmon3.github.io/refs/heads/main/profile.jpg" alt="Profile image of Defmon3">
+  <div class="cols">
+    <div>
+      <h3>Hi, I am Defmon3.</h3>
+      <p class="lead">I am an independent OSINT researcher from Sweden,  with a mission to document and counter the activities of the Russian Federation using open sources. I run this project in my spare time alongside a full-time job, dedicating my efforts to providing clear and actionable intelligence.</p>
+      <p>My work involves designing and maintaining investigative tools, collecting and verifying data at scale and providing producing actionable intel for others to act on. I also host a community Discord, creating a collaborative environment for activist.</p>
+    </div>
+    <div class="focus">
+      <h4>Current focus areas</h4>
+      <ul class="styled-list">
+        <li>Tracking Russian military units</li>
+        <li>Monitoring Russian social media accounts</li>
+        <li>Documenting Russian personnel losses</li>
+        <li>Mapping infrastructure, industry, and personnel networks</li>
+      </ul>
+
+      <h4>Your support covers</h4>
+      <ul class="styled-list">
+        <li>Google Cloud for hosting & tools</li>
+         <li>Aleph investigative tools</li>
+        <li>Scribble Maps for collaboration</li>
+        <li>Commercial satellite services</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<p class="subhead">Choose a subscription level</p>
+<p class="subtitle">Your contribution helps cover these costs and allows me to dedicate more time to the project. Choose a subscription level below or make a one-time donation. Current expenses amount to around $300-400 per month</p>
 
 <div class="plans">
-<div class="plan">
-<h2>$5 / month</h2>
-<a class="pp-btn" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-0FH6110669620531CNCQZOMA" target="_blank" rel="noopener" aria-label="Subscribe $5 on PayPal">
-<svg class="pp-logo" viewBox="0 0 24 24">
-<path class="pp-dark" d="M14.7 4.1c-2.3 0-4 .9-4.8 3l-.1.4h3.8c.6 0 1.1.5 1 .9l-.5 3.2c-.1.5-.6.9-1.2.9H8.3L7.5 18c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c3 0 5.6-1.9 6.2-5 .7-3.7-1.9-5.7-6.1-5.7z"></path>
-<path class="pp-blue" d="M10.1 7.5H6.3l-1.5 9.1c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c.6 0 1.1-.4 1.2-.9l.4-2.5c.1-.4-.3-.9-.9-.9z"></path>
-</svg>
-<span>PayPal Subscribe</span>
-</a>
-</div>
+  <div class="plan">
+    <h2>$5 / month</h2>
+    <a class="pp-btn" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-0FH6110669620531CNCQZOMA" target="_blank" rel="noopener" aria-label="Subscribe $5 on PayPal">
+      <svg class="pp-logo" viewBox="0 0 24 24" fill="none"><path fill="#003087" d="M14.7 4.1c-2.3 0-4 .9-4.8 3l-.1.4h3.8c.6 0 1.1.5 1 .9l-.5 3.2c-.1.5-.6.9-1.2.9H8.3L7.5 18c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c3 0 5.6-1.9 6.2-5 .7-3.7-1.9-5.7-6.1-5.7z"/><path fill="#0070ba" d="M10.1 7.5H6.3l-1.5 9.1c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c.6 0 1.1-.4 1.2-.9l.4-2.5c.1-.4-.3-.9-.9-.9z"/></svg>
+      <span>PayPal Subscribe</span>
+    </a>
+  </div>
 
-<div class="plan">
-<h2>$10 / month</h2>
-<a class="pp-btn" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-4TR20429FR015990VNCQZ2DY" target="_blank" rel="noopener" aria-label="Subscribe $10 on PayPal">
-<svg class="pp-logo" viewBox="0 0 24 24">
-<path class="pp-dark" d="M14.7 4.1c-2.3 0-4 .9-4.8 3l-.1.4h3.8c.6 0 1.1.5 1 .9l-.5 3.2c-.1.5-.6.9-1.2.9H8.3L7.5 18c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c3 0 5.6-1.9 6.2-5 .7-3.7-1.9-5.7-6.1-5.7z"></path>
-<path class="pp-blue" d="M10.1 7.5H6.3l-1.5 9.1c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c.6 0 1.1-.4 1.2-.9l.4-2.5c.1-.4-.3-.9-.9-.9z"></path>
-</svg>
-<span>PayPal Subscribe</span>
-</a>
-</div>
+  <div class="plan">
+    <h2>$10 / month</h2>
+    <a class="pp-btn" href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-4TR20429FR015990VNCQZDY" target="_blank" rel="noopener" aria-label="Subscribe $10 on PayPal">
+      <svg class="pp-logo" viewBox="0 0 24 24" fill="none"><path fill="#003087" d="M14.7 4.1c-2.3 0-4 .9-4.8 3l-.1.4h3.8c.6 0 1.1.5 1 .9l-.5 3.2c-.1.5-.6.9-1.2.9H8.3L7.5 18c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c3 0 5.6-1.9 6.2-5 .7-3.7-1.9-5.7-6.1-5.7z"/><path fill="#0070ba" d="M10.1 7.5H6.3l-1.5 9.1c-.1.5.3.9.8.9h2.7c.4 0 .7-.3.8-.6l.6-3.5h2.2c.6 0 1.1-.4 1.2-.9l.4-2.5c.1-.4-.3-.9-.9-.9z"/></svg>
+      <span>PayPal Subscribe</span>
+    </a>
+  </div>
 </div>
 
 <div class="one-time">
-<label for="donate-amount">One-time:</label>
-<input id="donate-amount" type="number" step="0.01" min="1" placeholder="Custom amount (USD)">
-<button class="secondary-btn" id="donate-custom">Donate</button>
+  <label for="donate-amount">One-time:</label>
+  <input id="donate-amount" type="number" step="0.01" min="1" placeholder="Custom amount (USD)">
+  <button class="secondary-btn" id="donate-custom">Donate</button>
 </div>
 </main>
 
 <footer class="site-footer">
 <a class="icon-btn" href="https://x.com/defmon3" target="_blank" rel="noopener" aria-label="X">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M4 4L20 20"></path><path d="M20 4L4 20"></path>
-</svg>
-<span class="label">X</span>
+  <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+  <span class="label">X</span>
 </a>
 <a class="icon-btn" href="https://bsky.app/profile/defmon3.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
-<svg class="icon icon-fill" viewBox="0 0 24 24">
-<path d="M7.2 4.2c1.7 1.8 3.6 4.3 4.8 6.1 1.2-1.8 3.1-4.3 4.8-6.1 1.5-1.6 4.2-1 4.2 1.6 0 1.3-.7 2.7-1.6 3.6-1.4 1.4-3.7 2.3-5.2 2.7 1.8.5 3.8 1.7 4.8 2.8 1 .9 1.6 2.3 1.6 3.6 0 2.4-2.6 3.3-4.2 1.6-1.4-1.4-2.8-3.7-4-5.8-1.2 2.1-2.6 4.4-4 5.8-1.6 1.7-4.2.8-4.2-1.6 0-1.3.6-2.7 1.6-3.6 1.1-1.1 3-2.3 4.8-2.8-1.5-.4-3.8-1.3-5.2-2.7C2.7 8.5 2 7.1 2 5.8c0-2.6 2.7-3.2 4.2-1.6z"></path>
-</svg>
-<span class="label">Bluesky</span>
+  <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.2 4.2c1.7 1.8 3.6 4.3 4.8 6.1 1.2-1.8 3.1-4.3 4.8-6.1 1.5-1.6 4.2-1 4.2 1.6 0 1.3-.7 2.7-1.6 3.6-1.4 1.4-3.7 2.3-5.2 2.7 1.8.5 3.8 1.7 4.8 2.8 1 .9 1.6 2.3 1.6 3.6 0 2.4-2.6 3.3-4.2 1.6-1.4-1.4-2.8-3.7-4-5.8-1.2 2.1-2.6 4.4-4 5.8-1.6 1.7-4.2.8-4.2-1.6 0-1.3.6-2.7 1.6-3.6 1.1-1.1 3-2.3 4.8-2.8-1.5-.4-3.8-1.3-5.2-2.7C2.7 8.5 2 7.1 2 5.8c0-2.6 2.7-3.2 4.2-1.6z"></path></svg>
+  <span class="label">Bluesky</span>
 </a>
 <a class="icon-btn" href="https://discord.gg/Mc3zwkNm" target="_blank" rel="noopener" aria-label="Discord">
-<svg class="icon" viewBox="0 0 24 24">
-<path d="M4 5h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-5l-3 3-3-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
-<circle cx="9" cy="11" r="1.5"></circle>
-<circle cx="15" cy="11" r="1.5"></circle>
-</svg>
-<span class="label">Discord</span>
+  <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22h-13.62c-1.356 0-2.46-1.104-2.46-2.472V2.472C1.46 1.104 2.564 0 3.92 0zM8.515 9.33h1.98v4.14h-1.98zm4.98 0h1.98v4.14h-1.98z"></path></svg>
+  <span class="label">Discord</span>
 </a>
 <a class="icon-btn" href="mailto:defmon3@proton.me" aria-label="Email">
-<svg class="icon" viewBox="0 0 24 24">
-<rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
-<path d="M3 7l9 6 9-6"></path>
-</svg>
-<span class="label">Email</span>
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+  <span class="label">Email</span>
 </a>
 </footer>
 
